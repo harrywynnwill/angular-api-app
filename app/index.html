@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="js/CodeWarsApiService.js"></script>
+    <script type="text/javascript" src="js/GitHubApiService.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="gitHubDataController">
+    <!-- {{user.data.repos_url}} -->
+    <!-- <img src="{{userData.avatar_url}}" alt="" /> -->
+
+
+    <div class="codewars" ng-repeat="(key, value) in codeWars.ranks.languages">
+      <!-- {{$index + 1}}
+      {{key}} -->
+    </div>
+    <div class="github">
+
+        <div class="stats" ng-repeat="(key,lang) in languageCounter(repos)">
+
+          {{key}} {{lang }}
+        </div>
+      <div class="repos" ng-repeat="repo in repos">
+
+
+        <h1>{{repo.language}}</h1> {{repo.name}}
+      </div>
+    </div>
+
+  </body>
+</html>

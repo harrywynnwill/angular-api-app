@@ -1,0 +1,23 @@
+{
+  "name": "github-api-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.5.0",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-spec-reporter": "0.0.26",
+    "protractor": "^3.2.2"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js",
+    "start": "http-server ./app -a localhost -p 8000 -c-1"
+  }
+}
