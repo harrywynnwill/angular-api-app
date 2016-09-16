@@ -11,3 +11,8 @@ cd github-api
 npm start
 open app/index.html
 ```
+run the following to run tests:
+Run Karma tests:
+`karma start test/karma.conf.js`
+ Run Protractor tests:
+`npm run protractor test/protractor.conf.js`
