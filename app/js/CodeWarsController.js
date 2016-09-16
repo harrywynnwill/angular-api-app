@@ -9,19 +9,17 @@ app.controller('CodeWarsController', ['$scope', 'CodeWars', function($scope, Cod
     $scope.clan;
     $scope.honor;
     $scope.leaderboardPosition;
-    // GitHub.getRepos().then(function(response){
-    //   $scope.repos = response.data;
-    // });
+
+
     CodeWars.getData().then(function(response){
       _populateData(response.ranks.languages);
       _getUserInfo(response);
     });
 
     function _populateData(response){
-      console.log(response)
       var score = [];
       var language = [];
-      for (languages in response){
+      for (var languages in response){
         language.push(languages);
         score.push(response[languages].score);
       }

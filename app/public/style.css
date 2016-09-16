@@ -1,0 +1,21 @@
+.repo {
+  border-collapse: collapse;
+}
+
+.repo th {
+  border-bottom: 1px solid;
+}
+.repo td, .repo th {
+  border-left: 1px solid;
+  padding: 5px 10px;
+}
+.repo td:first-child, .repo th:first-child {
+  border-left: none;
+}
+
+.sortorder:after {
+  content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+  content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}
