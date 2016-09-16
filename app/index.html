@@ -2,12 +2,23 @@
 <html ng-app="app">
 
 <head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="/public/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+  <script src="https://use.fontawesome.com/1353f7dc33.js"></script>
+     <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 	<script type="text/javascript" src="bower_components/fusioncharts/fusioncharts.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="bower_components/angular-fusioncharts.min.js"></script>
+	<script type="text/javascript" src="js/angular-fusioncharts.min.js"></script>
 	<script type="text/javascript" src="bower_components/fusioncharts/themes/fusioncharts.theme.fint.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-	<link rel="stylesheet" type="text/css" href="/public/style.css">
+
+
+
 	<script type="text/javascript" src="../node_modules/chart.js/dist/Chart.js"></script>
 	<script type="text/javascript" src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
@@ -20,6 +31,30 @@
 </head>
 
 <body>
+	<header class="header grey darken-3  z-depth-1">
+		<img ng-src="public/portrait.jpeg" class="circle responsive-img"/>
+		<h1>Harry Wynn-Williams</h1>
+		<div class="chip">Junior Developer
+				 <i class="close material-icons">close</i>
+
+
+		</div>
+	</header>
+
+  	<nav>
+      <div class="nav-wrapper grey darken-3" >
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="https://github.com/harrywynnwill"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/harrywinmillion"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="https://uk.linkedin.com/in/harry-wynn-williams-59b89040"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+  <!-- <div class="container">
+
 	<div class="codewars" ng-controller="CodeWarsController">
 		<div class="stats">
 			Clan: {{clan}}
@@ -31,21 +66,38 @@
 			</canvas>
 		</div>
 	</div>
+</div> -->
+<div class="github" ng-controller="GitHubController">
+<div class="conatainer">
+	<div class="row">
+		<div class="container">
 
-	<div class="github" ng-controller="GitHubController">
-		<!-- <img ng-src="{{avatar}}"/> -->
-		<div class="stats">
-			Total Public Repos: {{repoCount}}
-			<br> Following: {{following}}
-			<br> Followers: {{followers}}
+		<div class="col s3">
+			<div class="card-panel">
+				Total Public Repos: {{repoCount}}
+				<br> Following: {{following}}
+				<br> Followers: {{followers}}
+			</div>
 		</div>
-		<div fusioncharts
-	       width="600"
-	       height="400"
-	       type="doughnut2d"
-	       dataSource="{{myDataSource}}" >
-	    </div>
-		<pre>Sort by = {{propertyName}}; reverse = {{reverse}}</pre>
+
+		<div class="col s9">
+			<div fusioncharts
+		       width="1000"
+		       height="600"
+		       type="doughnut2d"
+		       dataSource="{{myDataSource}}" >
+		    </div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+  <!-- <img src="public/background1.png" alt="Unsplashed background img 1">< -->
+
+
+
+
+	<div class="container">
 		<hr/>
 		<button ng-click="propertyName = null; reverse = false">Set to unsorted</button>
 		<hr/>
@@ -58,15 +110,15 @@
 				</th>
 				<th>
 					<button ng-click="sortBy('language')">language</button>
-					<span class="sortorder" ng-show="propertyName === 'size'" ng-class="{reverse: reverse}"></span>
+					<span class="sortorder" ng-show="propertyName === 'language'" ng-class="{reverse: reverse}"></span>
 				</th>
 				<th>
 					<button ng-click="sortBy('size')">Size</button>
 					<span class="sortorder" ng-show="propertyName === 'size'" ng-class="{reverse: reverse}"></span>
 				</th>
 				<th>
-					<button ng-click="sortBy('watchers_count')">Description</button>
-					<span class="sortorder" ng-show="propertyName === 'watchers_count'" ng-class="{reverse: reverse}"></span>
+					<button ng-click="sortBy('description')">Description</button>
+					<span class="sortorder" ng-show="propertyName === 'description'" ng-class="{reverse: reverse}"></span>
 				</th>
 			</tr>
 			<tr ng-repeat="repo in repos | orderBy:propertyName:reverse">
@@ -78,6 +130,7 @@
 			</tr>
 
 		</table>
+	</div>
 
 	</div>
 

@@ -1,5 +1,5 @@
 app.controller('GitHubController',['$scope', 'GitHub', function($scope, GitHub){
-
+ var thirty_two = 32;
 
   $scope.repos;
   $scope.data;
@@ -9,15 +9,16 @@ app.controller('GitHubController',['$scope', 'GitHub', function($scope, GitHub){
   $scope.following;
   $scope.myDataSource = {
                 chart: {
-                    caption: "GitHub languages breakdown",
+                    caption: "Language breakdown",
                     centerLabel: "$label: $value",
                     theme: "fint",
                     showPercentValues: "1",
 
                 },
-                data:[{
+                data:
+                [{
                     label: "Ruby",
-                    value: "32"
+                    value: thirty_two
                 },
                 {
                     label: "Javascript",
@@ -70,11 +71,19 @@ app.controller('GitHubController',['$scope', 'GitHub', function($scope, GitHub){
 
   function _countLanguages(array){
     var count = {}
+    var
     for (var language in array){
       count[array[language]]=(count[array[language]] || 0) +1
     }
     console.log(count)
-    return count
+    for (language in count){
+      console.log(language)
+      (label: language)
+    }
   }
+
+  // function _covertJson(hash){
+  //
+  // }
 
 }]);
