@@ -1,4 +1,4 @@
-var app = angular.module('app', ['chart.js', 'ng-fusioncharts']);
+var app = angular.module('app', ['chart.js', 'ng-fusioncharts', 'ui.router']);
 
 app.config(function (ChartJsProvider) {
   // Configure all charts

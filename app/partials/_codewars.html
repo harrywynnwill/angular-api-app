@@ -1,0 +1,14 @@
+<div class="container">
+
+<div class="codewars" ng-controller="CodeWarsController">
+  <div class="stats">
+    Clan: {{clan}}
+    <br> Honour: {{honor}}
+    <br> Leaderboard: {{leaderboardPosition}}
+  </div>
+  <div class="chart">
+    <canvas id="polar-area" class="chart chart-pie" chart-data="score" chart-labels="lang" chart-options="options">
+    </canvas>
+  </div>
+</div>
+</div>

@@ -1,4 +1,4 @@
-app.controller('CodeWarsController', ['$scope', 'CodeWars', function($scope, CodeWars){
+app.controller('CodeWarsController', ['$scope', 'CodeWarsApiService', function($scope, CodeWarsApiService){
 
     $scope.user;
     $scope.repos;
@@ -11,7 +11,7 @@ app.controller('CodeWarsController', ['$scope', 'CodeWars', function($scope, Cod
     $scope.leaderboardPosition;
 
 
-    CodeWars.getData().then(function(response){
+    CodeWarsApiService.getData().then(function(response){
       _populateData(response.ranks.languages);
       _getUserInfo(response);
     });

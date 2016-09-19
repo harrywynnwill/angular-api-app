@@ -1,0 +1,66 @@
+<div class="github" ng-controller="GitHubController">
+<div class="conatainer">
+	<div class="row">
+		<div class="container">
+
+		<div class="col s3">
+			<div class="card-panel">
+				Total Public Repos: {{repoCount}}
+				<br> Following: {{following}}
+				<br> Followers: {{followers}}
+			</div>
+		</div>
+
+		<div class="col s9">
+			<div fusioncharts
+		       width="1000"
+		       height="600"
+		       type="doughnut2d"
+		       dataSource="{{myDataSource}}" >
+		    </div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+  <!-- <img src="public/background1.png" alt="Unsplashed background img 1">< -->
+
+
+
+
+	<div class="container">
+		<hr/>
+		<button ng-click="propertyName = null; reverse = false">Set to unsorted</button>
+		<hr/>
+
+		<table class="repos">
+			<tr>
+				<th>
+					<button ng-click="sortBy('name')">Repo Name</button>
+					<span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+				</th>
+				<th>
+					<button ng-click="sortBy('language')">language</button>
+					<span class="sortorder" ng-show="propertyName === 'language'" ng-class="{reverse: reverse}"></span>
+				</th>
+				<th>
+					<button ng-click="sortBy('size')">Size</button>
+					<span class="sortorder" ng-show="propertyName === 'size'" ng-class="{reverse: reverse}"></span>
+				</th>
+				<th>
+					<button ng-click="sortBy('description')">Description</button>
+					<span class="sortorder" ng-show="propertyName === 'description'" ng-class="{reverse: reverse}"></span>
+				</th>
+			</tr>
+			<tr ng-repeat="repo in repos | orderBy:propertyName:reverse">
+				<td>{{repo.name}}</td>
+				<td>{{repo.language}}</td>
+				<td>{{repo.size}}</td>
+				<td>{{repo.description}}</td>
+
+			</tr>
+
+		</table>
+	</div>
+
+	</div>

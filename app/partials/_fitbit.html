@@ -1,0 +1,7 @@
+<div class="fitbit" ng-controller="FitBitController">
+  Average Daily Steps{{fitBitData.averageDailySteps}}
+  <div class="badges" ng-repeat="badge in fitBitData.topBadges">
+    <img src="{{badge.image100px}}" alt="" /> {{badge.description}}
+  </div>
+
+</div>
