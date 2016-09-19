@@ -1,38 +1,25 @@
 app.controller('GitHubController',['$scope', 'GitHub', function($scope, GitHub){
- var thirty_two = 32;
 
+  var data = [{
+label: "Bakersfield Central",
+value: "880000"
+}]
   $scope.repos;
   $scope.data;
   $scope.avatar;
   $scope.repoCount;
   $scope.followers;
   $scope.following;
-  $scope.myDataSource = {
-                chart: {
-                    caption: "Language breakdown",
-                    centerLabel: "$label: $value",
-                    theme: "fint",
-                    showPercentValues: "1",
+  $scope.chartData;
+  $scope.myDataSource;
 
-                },
-                data:
-                [{
-                    label: "Ruby",
-                    value: thirty_two
-                },
-                {
-                    label: "Javascript",
-                    value: "17"
-                },
-                {
-                    label: "Java",
-                    value: "1"
-                },
-                {
-                    label: "C#",
-                    value: "1"
-                }]
-              };
+
+
+
+
+
+
+
 
 
   $scope.propertyName = 'name';
@@ -44,15 +31,44 @@ app.controller('GitHubController',['$scope', 'GitHub', function($scope, GitHub){
   };
 
 
-  GitHub.getUserInfo().then(function(response){
-    $scope.data = response;
+  GitHub.getUserInfo()
+  .then(function(response){
     _getAccountInfo(response);
+
   });
 
   GitHub.getRepos().then(function(response){
-    $scope.repos = response
-    _countLanguages(_getLanguageCount(response));
+    $scope.repos = response;
+    return response
   });
+
+  GitHub.getRepos().then(function(response){
+    return response;
+  })
+  .then(function(response){
+    return (_getLanguageCount(response));
+  })
+  .then(function(response){
+    return $scope.chartData = _countLanguages(response)
+
+  })
+  console.log($scope.chartData)
+
+
+  //    = {
+  //                 chart: {
+  //                     caption: "Language breakdown",
+  //                     centerLabel: "$label: $value",
+  //                     theme: "fint",
+  //                     showPercentValues: "1",
+  //
+  //                 },
+  //                 data: $scope.chartData
+  //
+  //   };
+  // });
+
+
 
   function _getAccountInfo(response){
     $scope.avatar = response.avatar_url;
@@ -60,6 +76,7 @@ app.controller('GitHubController',['$scope', 'GitHub', function($scope, GitHub){
     $scope.followers = response.followers;
     $scope.following = response.following;
   }
+
 
   function _getLanguageCount(response){
     var language = [];
@@ -70,20 +87,33 @@ app.controller('GitHubController',['$scope', 'GitHub', function($scope, GitHub){
   }
 
   function _countLanguages(array){
-    var count = {}
-    var
+    var count = {};
+    var data = [];
     for (var language in array){
-      count[array[language]]=(count[array[language]] || 0) +1
+      count[array[language]]=(count[array[language]] || 0) +1;
     }
-    console.log(count)
     for (language in count){
-      console.log(language)
-      (label: language)
+       var item = count[language];
+          data.push({
+            "label": language,
+            "value": item
+        });
+      }
+      return data;
     }
-  }
 
-  // function _covertJson(hash){
-  //
-  // }
+
+
+  function _generateDataTable(hash){
+    var data = []
+    for (language in hash){
+      var item = hash[language];
+         data.push({
+           "label": language,
+           "value": item
+       });
+     }
+     return data;
+   }
 
 }]);
