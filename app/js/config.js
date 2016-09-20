@@ -10,11 +10,11 @@ function config($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "/app/public/views/gitHub.html",
+      templateUrl: "/app/public/views/github.html",
     })
     .state('github', {
       url: "/gitHub",
-      templateUrl: "/app/public/views/gitHub.html",
+      templateUrl: "/app/public/views/github.html",
     })
     .state('twitter', {
       url: "/twitter",
