@@ -1,0 +1,42 @@
+{
+  "name": "fusionmaps",
+  "description": "FusionCharts JavaScript charting framework for distribution",
+  "main": "fusioncharts.js",
+  "authors": [
+    "FusionCharts Technologies <support@fusioncharts.com>"
+  ],
+  "license": "http://www.fusioncharts.com/buy/",
+  "keywords": [
+    "javascript-charts",
+    "javascript-maps",
+    "interactive-charts",
+    "interactive-maps",
+    "charts",
+    "maps",
+    "graphs",
+    "visualization",
+    "data-visualization",
+    "dataviz",
+    "browserify",
+    "webpack"
+  ],
+  "homepage": "http://www.fusioncharts.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "3.11.2",
+  "_release": "3.11.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.11.2",
+    "commit": "84c7ec550b5c582f9ca471cbbd68bb71ec843d04"
+  },
+  "_source": "https://github.com/fusioncharts/fusionmaps-dist.git",
+  "_target": "^3.11.2",
+  "_originalSource": "fusionmaps",
+  "_direct": true
+}

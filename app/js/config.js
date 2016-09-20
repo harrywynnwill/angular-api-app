@@ -10,22 +10,22 @@ function config($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "partials/_gitHub.html",
+      templateUrl: "/app/views/gitHub.html",
     })
     .state('github', {
       url: "/gitHub",
-      templateUrl: "partials/_gitHub.html",
+      templateUrl: "/app/views/gitHub.html",
     })
     .state('twitter', {
       url: "/twitter",
-      templateUrl: "partials/_twitter.html",
+      templateUrl: "app/views/twitter.html",
     })
     .state('fitbit', {
       url: "/fitbit",
-      templateUrl: "partials/_fitbit.html",
+      templateUrl: "/app/views/fitbit.html",
     })
     .state('codewars', {
       url: "/codewars",
-      templateUrl: "partials/_codewars.html",
+      templateUrl: "app/views/codewars.html",
     });
 }

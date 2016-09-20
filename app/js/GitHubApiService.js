@@ -1,8 +1,8 @@
 app.service('GitHub', ['$http', function($http){
   var self = this;
   //var API_LINK = "http://api.github.com/users/harrywynnwill"
-  var API_LINK = "/public/githubstats.json"
-  var API_LINK_REPOS = "public/repos.json"
+  var API_LINK = "app/public/githubstats.json"
+  var API_LINK_REPOS = "app/public/repos.json"
 
 
   self.getUserInfo = function(){

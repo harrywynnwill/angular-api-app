@@ -8,6 +8,7 @@ app.controller('GitHubController', ['$scope', 'GitHub', function($scope, GitHub)
 	$scope.followers;
 	$scope.following;
 	$scope.chartData;
+	$scope.updatedAt;
 	$scope.myDataSource = {
 		chart: {
 			caption: "Language breakdown",
@@ -45,7 +46,7 @@ app.controller('GitHubController', ['$scope', 'GitHub', function($scope, GitHub)
 
 
 
-	$scope.propertyName = 'name';
+	$scope.propertyName = 'watchers_count';
 	$scope.reverse = true;
 
 	$scope.sortBy = function(propertyName) {
@@ -101,6 +102,7 @@ app.controller('GitHubController', ['$scope', 'GitHub', function($scope, GitHub)
 		$scope.repoCount = response.public_repos;
 		$scope.followers = response.followers;
 		$scope.following = response.following;
+		$scope.updatedAt = response.updated_at;
 	}
 
 

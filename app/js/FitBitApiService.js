@@ -1,7 +1,7 @@
 angular.module('app')
   .service('FitBitApiService', ['$http', function($http) {
     self = this;
-    var API_LINK = "/public/fitbit.json"
+    var API_LINK = "app/public/fitbit.json"
 
 
     // self.getFitBitData = function(){

@@ -1,0 +1,92 @@
+<div class="github" ng-controller="GitHubController">
+<div class="conatainer">
+	<div class="row">
+		<div class="container">
+
+		<div class="col s4">
+			<div class="card blue-grey darken-1">
+				<div class="card-content white-text">
+					<span class="card-title">GitHub</span>
+					<p>
+						All my past projects and current "stuff" - personal projects, tech tests and languages/ frameworks i'm learning. Feel free to check out the repos, make some pull requests and star them!
+					</p>
+					</div>
+					<div class="card-action">
+						<a href="https://github.com/harrywynnwill?tab=repositories">View on GitHub</a>
+
+					</div>
+				</div>
+			<blockquote>
+				Stats taken from my GitHub account using the API.
+			</blockquote>
+			<div class="card-panel">
+				<b>Total Public Repos:</b> {{repoCount}}
+				<br> Following: {{following}}
+				<br> Followers: {{followers}}
+				<br> Updated: {{updatedAt}}
+			</div>
+		</div>
+
+		<div class="col s8">
+
+			<div class ="chart" fusioncharts
+		       width="1000"
+		       height="600"
+		       type="doughnut2d"
+		       dataSource="{{myDataSource}}" >
+		    </div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+  <!-- <img src="public/background1.png" alt="Unsplashed background img 1">< -->
+
+
+
+
+	<div class="container">
+		<h5>Search Repositories: <input type="text" ng-model="search"></h5>
+
+		<button ng-click="propertyName = null; reverse = false">Set to unsorted</button>
+
+
+
+		<table class="highlight">
+			<thead>
+
+			<tr>
+				<th data-field="Repo">
+					<button ng-click="sortBy('name')">Repo Name</button>
+					<span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+				</th>
+				<th data-field="language">
+					<button ng-click="sortBy('language')">language</button>
+					<span class="sortorder" ng-show="propertyName === 'language'" ng-class="{reverse: reverse}"></span>
+				</th>
+				<th data-field="size">
+					<button ng-click="sortBy('size')">Size</button>
+					<span class="sortorder" ng-show="propertyName === 'size'" ng-class="{reverse: reverse}"></span>
+				</th>
+				<th data-field="description">Description</th>
+					<th data-field="starred">
+						<button ng-click="sortBy('watchers_count')">Starred Repos</button>
+						<span class="sortorder" ng-show="propertyName === 'watchers_count'" ng-class="{reverse: reverse}"></span>
+					</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr ng-repeat="repo in repos | orderBy:propertyName:reverse | filter:search">
+				<td><a ng-href="{{repo.html_url}}"> {{repo.name}} </a> </td>
+				<td>{{repo.language}}</td>
+				<td>{{repo.size}}</td>
+				<td>{{repo.description}}</td>
+					<td>{{repo.watchers_count}}</td>
+			</tr>
+		</tbody>
+
+		</table>
+	</div>
+
+	</div>
