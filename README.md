@@ -1,8 +1,11 @@
-# Angular API
+[Checkout the Website](https://harrywynnwill.github.io/#/)
 
-Personal project experimenting with Angular and API services.
+#harrywynnwill.github.io
 
-Aim is to have a responsive page with my codewars, twitter and github stats
+Angular and Jekyll Personal Website hosted on GitHub Pages
+
+
+
 
 #Installation
 ```

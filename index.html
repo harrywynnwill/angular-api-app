@@ -2,25 +2,29 @@
 <html ng-app="app">
 
 <head>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="app/public/css/materialize.min.css"  media="screen,projection"/>
-  <link rel="stylesheet" type="text/css" href="app/public/css/style.css">
-  <script src="https://use.fontawesome.com/1353f7dc33.js"></script>
-     <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="app/public/css/materialize.min.css" media="screen,projection" />
+	<link rel="stylesheet" type="text/css" href="app/public/css/style.css">
+
+	<script src="https://use.fontawesome.com/1353f7dc33.js"></script>
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="app/public/js/materialize.min.js"></script>
 
 	<script type="text/javascript" src="app/bower_components/fusioncharts/fusioncharts.js"></script>
 	<script type="text/javascript" src="app/bower_components/angular/angular.js"></script>
 	<script type="text/javascript" src="app/js/angular-fusioncharts.min.js"></script>
 	<script type="text/javascript" src="app/bower_components/fusioncharts/themes/fusioncharts.theme.fint.js"></script>
-  <script src="app/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="app/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-  <script type="text/javascript" src="app/bower_components/ngtweet/dist/ngtweet.min.js"></script>
+	<script type="text/javascript" src="app/bower_components/ngtweet/dist/ngtweet.min.js"></script>
 	<script type="text/javascript" src="app/js/app.js"></script>
 
-  <script type="text/javascript" src="app/js/config.js"></script>
+	<script type="text/javascript" src="app/js/config.js"></script>
 
 
 	<script type="text/javascript" src="app/node_modules/chart.js/dist/Chart.js"></script>
@@ -30,46 +34,83 @@
 	<script type="text/javascript" src="app/js/GitHubApiService.js"></script>
 	<script type="text/javascript" src="app/js/CodeWarsController.js"></script>
 	<script type="text/javascript" src="app/js/GitHubController.js"></script>
-  <script type="text/javascript" src="app/js/FitBitApiService.js"></script>
-  <script type="text/javascript" src="app/js/FitBitController.js"></script>
+	<script type="text/javascript" src="app/js/FitBitApiService.js"></script>
+	<script type="text/javascript" src="app/js/FitBitController.js"></script>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Harry Wynn-Williams</title>
 </head>
 
 <body>
-	<header class="header grey darken-3  z-depth-1">
-		<img ng-src="app/public/portrait.jpeg" class="circle responsive-img"/>
-		<h1>HARRY WYNN-WILLIAMS</h1>
-		<div class="chip">Junior Developer
-				 <i class="close material-icons">close</i>
 
 
-		</div>
+
+  <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+   <a class="btn-floating btn-large grey darken-3">
+     <i class="material-icons">menu</i>
+   </a>
+   <ul>
+     <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+     <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+     <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+     <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+   </ul>
+ </div>
+
+	<header class="header grey darken-3">
+		<img ng-src="app/public/portrait.jpeg" class="circle responsive-img" />
+		<h4>HARRY WYNN-WILLIAMS</h4>
+		<div class="chip">Junior Developer<i class="close material-icons">close</i></div>
+    <div class="chip">Ruby<i class="close material-icons">close</i></div>
+    <div class="chip">JavaScript<i class="close material-icons">close</i></div>
 	</header>
+  <nav>
+   <div class="nav-wrapper grey darken-3">
+     <ul class="left hide-on-med-and-down">
+       <li><a href="#/github">GitHub Stats</a></li>
+       <li><a href="#/twitter">Tweets</a></li>
+       <li><a href="#/fitbit">fitbit</a></li>
+       <li><a href="#/codewars">codewars stats</a></li>
+       <li><a href="#/CV">CV</a></li>
+     </ul>
+   </div>
+ </nav>
 
 
 
 
 
 
+<!--
+	<nav>
+		<div class="nav-wrapper grey darken-3">
 
-  	<nav>
-      <div class="nav-wrapper grey darken-3" >
+			<ul class="left hide-on-med-and-down">
 
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <!-- <div ng-include src="'partials/_gitHub.html'"></div> -->
-          <li><a href="#/twitter">tweeeets</a></li>
-          <li><a href="#/fitbit">fitbit</a></li>
-          <li><a href="#/github">github stats</a></li>
-          <li><a href="#/codewars">codewars stats</a></li>
-          <li><a href="https://github.com/harrywynnwill"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-          <li><a href="https://twitter.com/harrywinmillion"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li><a href="https://uk.linkedin.com/in/harry-wynn-williams-59b89040"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
-    </nav>
-    <div ui-view></div>
+        <li><a href="#/github">GitHub Stats</a></li>
+				<li><a href="#/twitter">tweeeets</a></li>
+				<li><a href="#/fitbit">fitbit</a></li>
+				<li><a href="#/codewars">codewars stats</a></li>
+				<li><a href="https://github.com/harrywynnwill"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+				<li><a href="https://twitter.com/harrywinmillion"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="https://uk.linkedin.com/in/harry-wynn-williams-59b89040"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav> -->
+	<div ui-view></div>
 
 </body>
+<footer class="page-footer grey darken-3">
+
+  <div class="footer-copyright">
+    <div class="container">
+    © 2016 Harry Wynn-Williams
+    <a class="grey-text text-lighten-4 right" href="https://github.com/harrywynnwill">  <i class="fa fa-twitter" aria-hidden="true">  </i>  </a>
+    <a class="grey-text text-lighten-4 right" href="https://uk.linkedin.com/in/harry-wynn-williams-59b89040">  <i class="fa fa-linkedin-square" aria-hidden="true">  </i></a>
+    <a class="grey-text text-lighten-4 right" href="https://github.com/harrywynnwill">  <i class="fa fa-github" aria-hidden="true">  </i>  </a>
+
+    </div>
+  </div>
+</footer>
+
 
 </html>

@@ -24,6 +24,10 @@ function config($stateProvider, $urlRouterProvider){
       url: "/fitbit",
       templateUrl: "app/public/views/fitbit.html",
     })
+    .state('CV', {
+      url: "/CV",
+      templateUrl: "app/public/views/CV.html",
+    })
     .state('codewars', {
       url: "/codewars",
       templateUrl: "app/public/views/codewars.html",
