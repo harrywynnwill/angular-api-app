@@ -4,7 +4,8 @@
 
 :construction: UNDER CONSTRUCTION :construction:
 
-using Jekyll with GitHub.io to Host my Personal Website.
+
+Jekyll with GitHub.io to Host my Personal Website.
 
 Using Angulars service to pull in various APIs.
 
@@ -15,6 +16,7 @@ Using Angulars service to pull in various APIs.
 * Twillio to text link to CV
 
 and much more...
+
 
 
 #Installation
