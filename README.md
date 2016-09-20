@@ -2,20 +2,33 @@
 
 #harrywynnwill.github.io
 
-Angular and Jekyll Personal Website hosted on GitHub Pages
+:construction: UNDER CONSTRUCTION :construction:
 
+using Jekyll with GitHub.io to Host my Personal Website.
 
+Using Angulars service to pull in various APIs.
+
+* GitHub API
+* CodeWars API
+* FitBit API
+* LinkedIn API
+* Twillio to text link to CV
+
+and much more...
 
 
 #Installation
+
 ```
-git clone git@github.com:harrywynnwill/angular-api-app.git
+git clone git@github.com:harrywynnwill/
 cd github-api
 npm start
-open app/index.html
+open index.html
 ```
 run the following to run tests:
+
 Run Karma tests:
 `karma start test/karma.conf.js`
+
  Run Protractor tests:
 `npm run protractor test/protractor.conf.js`

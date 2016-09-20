@@ -1,3 +1,5 @@
+
+require('dotenv').config()
 var app = angular.module('app', ['chart.js', 'ng-fusioncharts', 'ui.router']);
 
 app.config(function (ChartJsProvider) {
