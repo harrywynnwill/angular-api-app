@@ -2,3 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 keys.env
+node_modules
+app/bower_components
+app/node_modules
