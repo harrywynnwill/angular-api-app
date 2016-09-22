@@ -21,7 +21,8 @@
     "materialize": "^0.97.7",
     "angular-route": "1.5.x",
     "ngtweet": "^0.6.1",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "angular-twilio": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.8"

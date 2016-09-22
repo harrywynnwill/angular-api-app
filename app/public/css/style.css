@@ -54,3 +54,8 @@ h1 {
 .twitter {
     padding: 10px;
 }
+
+.collapsible-body p {
+    margin: 0;
+    padding: 1rem;
+}
