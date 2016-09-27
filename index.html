@@ -62,15 +62,23 @@
    </ul>
  </div> -->
 
-	<header class="header grey darken-3">
-		<img ng-src="app/public/portrait.jpeg" class="circle responsive-img" />
+	<header class="header grey darken-3 z-depth-2">
+		<img ng-src="app/public/portrait.jpeg" class="circle responsive-img z-depth-2" />
 		<h4>HARRY WYNN-WILLIAMS</h4>
 		<div class="chip">Junior Developer<i class="close material-icons">close</i></div>
     <div class="chip">Ruby<i class="close material-icons">close</i></div>
     <div class="chip">JavaScript<i class="close material-icons">close</i></div>
 	</header>
+	<div class="parallax-container">
+		<div class="parallax"><img src="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-10.jpg"></div>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.parallax').parallax();
+	});
+	</script>
   <nav>
-   <div class="nav-wrapper grey darken-3">
+   <div class="nav-wrapper grey darken-3 z-depth-2">
      <ul class="left hide-on-med-and-down">
 			 <li><a href="#/cv">CV</a></li>
        <li><a href="#/github">GitHub Stats</a></li>

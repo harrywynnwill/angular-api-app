@@ -39,6 +39,10 @@ h1 {
 }
 
 
+    .parallax-container {
+      height: 200px;
+    }
+
 
 @font-face {
     font-family: atomic;
