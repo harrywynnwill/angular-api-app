@@ -13,7 +13,7 @@ function config($stateProvider, $urlRouterProvider){
       templateUrl: "/app/public/views/cv.html",
     })
     .state('github', {
-      url: "/gitHub",
+      url: "/github",
       templateUrl: "/app/public/views/github.html",
     })
     .state('twitter', {
