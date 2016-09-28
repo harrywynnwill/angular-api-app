@@ -37,8 +37,8 @@ h1 {
   font-family: atomic;
   font-size: 40px
 }
-.stack{
-  margin: 50px;
+.stack, .buttons{
+  margin: 40px;
 
 }
 
